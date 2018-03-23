@@ -4,6 +4,11 @@
 
 char* strtrns(const char* string,const char* old,const char* new, char* result)
 {
+	if(result==NULL)
+	{
+		puts("result is NULL");
+		return "";
+	}
 	for(int j = 0; j < mystrlen(string); j++){
 		result[j] =	string[j];
 		for(int i = 0; i < mystrlen(old); i++)

@@ -67,10 +67,10 @@ void my_usort (void * base, size_t num, size_t size, int (*comparator)(const voi
 	int res,t_int; double t_double; char t_char;
 	for(int i=0;i<num*size-size;i+=size)
 	{
-		res=comparator(&base[i],&base[i+size]);
+		res=comparator(&base[i],&base[i + size]);
 		if(res>0)
 		{
-			for(int j=i;j>-1;j-=size)
+			for(int j=i;j>-1;j -= size)
 			{
 				res=comparator(&base[j],&base[j+size]);
 				if(res>0)
@@ -79,6 +79,7 @@ void my_usort (void * base, size_t num, size_t size, int (*comparator)(const voi
 					{
 						case integral:
 							t_int=*((int*)&base[j+size]);
+							printf("%d<->%d, )
 							*((int*)&base[j+size])=*((int*)&base[j]);
 							*((int*)&base[j])=t_int;
 							;break;		
@@ -96,7 +97,7 @@ void my_usort (void * base, size_t num, size_t size, int (*comparator)(const voi
 				}
 				else
 				{
-					//break;
+					break;
 				}
 			}	
 		}
@@ -123,13 +124,27 @@ void main(void)
 	char e='a',f='b';
 	res=myFuncMass[2](&e,&f);
 	printf(res>0?"first char argument > second char argument\n":res<0?"first char argument < second char argument\n":"first char argument == second char argument\n");
-	*/
+	
 	int len = 20;
-	int array[]={19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
+	int array_i[]={19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
 	puts("Before sorting:");
-	for(int i=0;i<len;i++)printf("%d ",array[i]);
-	my_usort(&array,len,sizeof(array[0]),myFuncMass[0]);
+	for(int i=0;i<len;i++)printf("%d ",array_i[i]);
+	my_usort(&array_i,len,sizeof(array[0]),myFuncMass[0]);
 	puts("\nAfter sorting:");
-	for(int i=0;i<len;i++)printf("%d ",array[i]);
-	printf("\n");
+	for(int i=0;i<len;i++)printf("%d ",array_i[i]);*/
+	
+	int len=10;
+	char array_c[]={'k','i','h','g','f','e','d','c','b','a'};
+	puts("\nBefore sorting:");
+	for(int i=0;i<len;i++)printf("%c ",array_c[i]);
+	my_usort(&array_c,len,sizeof(array_c[0]),myFuncMass[2]);
+	puts("\nAfter sorting:");
+	for(int i=0;i<len;i++)printf("%c ",array_c[i]);
+
+	/*double array_d[]={12.33, 10.456, 33.12, 15.55, 8.54, 4.223, 3.643543, 1.5654, 3.5464,2.4543};
+	puts("\nBefore sorting:");
+	for(int i=0;i<len;i++)printf("%f ",array_d[i]);
+	my_usort(&array_d,len,sizeof(array_d[0]),myFuncMass[1]);
+	puts("\nAfter sorting:");
+	for(int i=0;i<len;i++)printf("%f ",array_d[i]);*/
 }
