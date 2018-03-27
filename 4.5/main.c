@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "usort.h"
 
-
 void main(void)
 {	
 	comparator myFuncMass[3] = {&intcompare, &doublecompare, &charcompare};

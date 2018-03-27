@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include "usort.h"
 
+static unsigned short reverse=0;
+
 int intcompare (const void * a, const void * b)
 {
 	if(*((int*)a) == *((int*)b))
@@ -9,11 +11,11 @@ int intcompare (const void * a, const void * b)
 	}
 	else if(*((int*)a) > *((int*)b))
 	{
-		return 1;	
+		return reverse > 0 ? -1 : 1;	
 	}
 	else
 	{
-		return -1;
+		return reverse > 0 ? 1 : -1;
 	}
 }
 
@@ -25,11 +27,11 @@ int doublecompare (const void *a, const void * b)
 	}
 	else if(*((double*)a) > *((double*)b))
 	{
-		return 1;
+		return reverse > 0 ? -1 : 1;
 	}
 	else
 	{
-		return -1;
+		return reverse > 0 ? 1 : -1;
 	}
 }
 
@@ -41,11 +43,11 @@ int charcompare (const void *a, const void * b)
 	}
 	else if(*((char*)a) > *((char*)b))
 	{
-		return 1;	
+		return reverse > 0 ? -1 : 1;	
 	}
 	else
 	{
-		return -1;
+		return reverse > 0 ? 1 : -1;
 	}
 }
 //В качестве аргументов функции принимают указатели на соответствующие типы. Если значения равны, возвращается 0. Если первый аргумент больше второго – 
