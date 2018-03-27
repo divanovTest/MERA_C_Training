@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "../2.1/mystrlen.c"
 
-char* strtrns(const char* string,const char* old,const char* new, char* result)
+char* strtrns(const char* string, const char* old, const char* new, char* result)
 {
-	if(result==NULL)
+	if(result == NULL)
 	{
-		puts("result is NULL");
+		puts("result is NULL\n");
 		return "";
 	}
 	for(int j = 0; j < mystrlen(string); j++){

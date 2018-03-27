@@ -1,7 +1,7 @@
 #include "mymemmove.h"
 #include <stdlib.h>
 
-void *mymemmove(void* dest,const void* source,size_t size)
+void *mymemmove(void* dest, const void* source, size_t size)
 {
 	char *ch_dest = (char*) dest;
 	char *ch_source = (char*) source;

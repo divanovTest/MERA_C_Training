@@ -2,11 +2,11 @@
 #include "mystrlen.h"
 
 size_t mystrlen(const char* str){
-size_t val=0;
-while(*str){
-        str++;
-        val++;
-}
-return val;
+	size_t length = 0;
+	while(*str){
+		str++;
+		length++;
+	}
+	return length;
 }
 

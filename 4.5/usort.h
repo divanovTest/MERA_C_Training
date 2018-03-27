@@ -2,9 +2,9 @@
 #define USORT_H
 enum type
 {
-	character=sizeof(char),
-	integral=sizeof(int),
-	doubled=sizeof(double)
+	character = sizeof(char),
+	integral = sizeof(int),
+	doubled = sizeof(double)
 };
 typedef int (*comparator)(const void*, const void*);
 int intcompare (const void * a, const void * b);

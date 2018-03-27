@@ -22,10 +22,10 @@ void main(void)
 	puts("\nAfter sorting:");
 	for(int i = 0; i < len; i++)printf("%d ",array_i[i]);
 	
-	len=10;
+	len = 10;
 	double array_d[] = {12.33, 10.456, 33.12, 15.55, 8.54, 4.223, 3.643543, 1.5654, 3.5464,2.4543};
 	puts("\nBefore sorting:");
-	for(int i = 0;i < len; i++)printf("%f ", array_d[i]);
+	for(int i = 0; i < len; i++)printf("%f ", array_d[i]);
 	my_usort(&array_d, len, sizeof(array_d[0]), myFuncMass[1]);
 	puts("\nAfter sorting:");
 	for(int i = 0; i < len; i++)printf("%f ", array_d[i]);

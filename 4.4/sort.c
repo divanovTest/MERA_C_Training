@@ -1,21 +1,26 @@
 #include "sort.h"
+#include <stdlib.h>
 
 //Написать функцию для сортировки (любым способом: пузырьком, выбором, вставкой …)
 void mysort(int * array, int len)
 {
 	int temp;
-	for(int i=0;i<len-1;i++)
+	for(int i = 0; i < len - 1; i++)
 	{
-		if(array[i]>array[i+1])
+		if(array[i] > array[i + 1])
 		{
-			for(int j=i;j>-1;j--)
+			for(int j = i; j > -1; j--)
 			{
-				if(array[j]>array[j+1])
+				if(array[j] > array[j + 1])
 				{
-					temp=array[j];
-					array[j+1]=array[j];
-					array[j]=temp;
-				}else{break;}
+					temp = array[j];
+					array[j + 1] = array[j];
+					array[j] = temp;
+				}
+				else
+				{
+					break;
+				}
 				
 			}
 		}
@@ -38,9 +43,9 @@ void init_array(int * array, int len)
 //Написать функцию для проверки правильности сортировки:
 int check_order (int * array, int len)
 {
-	for(int i=0;i<len-1;i++)
+	for(int i = 0; i < len - 1; i++)
 	{
-		if(array[i]>array[i+1]){
+		if(array[i] > array[i + 1]){
 			return 1;	
 		}
 	}
