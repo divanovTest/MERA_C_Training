@@ -1,3 +1,5 @@
+PROGRAM=program
+all:$(PROGRAM)
 program:
 	gcc main.c -o program
 clean:

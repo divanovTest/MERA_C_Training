@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../4.5/usort.c" //my_usort
-//#include "../2.1/mystrlen.c" //mystrlen
+#include "../2.1/mystrlen.c" //mystrlen
 #include "../2.3/strtrns.c" //strtrns
 
 #define FILENAME "inputfile.txt"
