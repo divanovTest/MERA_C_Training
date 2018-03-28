@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "strtrns.h"
 
-
-
 int main(void){
 	char string[64] = "sample text";
 	const char* old_symbols = "st";

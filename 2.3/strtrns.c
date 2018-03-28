@@ -1,6 +1,6 @@
 #include "strtrns.h"
 #include <stdlib.h>
-#include "../2.1/mystrlen.c"
+//#include "../2.1/mystrlen.c"
 
 char* strtrns(const char* string, const char* old, const char* new, char* result)
 {
